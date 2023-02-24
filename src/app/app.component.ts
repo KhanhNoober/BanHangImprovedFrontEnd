@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Ban_Hang_Improve';
+  openSideBar: boolean = false;
+
+  openSideBarHandler() {
+    this.openSideBar = !this.openSideBar;
+  }
 }

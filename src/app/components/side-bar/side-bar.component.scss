@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidenav {
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selector>* {
+    width: 100%;
+    margin: 0.25rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.content {
+    display: block;
+}

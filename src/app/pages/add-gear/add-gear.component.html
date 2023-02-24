@@ -1,0 +1,48 @@
+<div class="container">
+    <form action="add gear" enctype='multipart/form-data'>
+        <mat-form-field appearance="fill" floatLabel="always" class="full-width">
+            <mat-label>name</mat-label>
+            <input matInput name="name" type="text" placeholder="name your product" [(ngModel)]="name" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always" class="full-width">
+            <mat-label>description</mat-label>
+            <textarea matInput name="description" type="text" placeholder="description" [(ngModel)]="description"
+                required></textarea>
+        </mat-form-field>
+        <div class="div-field">
+            <mat-form-field appearance="fill" floatLabel="always" class="full-width-div-1">
+                <mat-label>price</mat-label>
+                <input matInput name="price" type="number" placeholder="0" class="right-align" [(ngModel)]="price"
+                    required>
+                <span matTextPrefix>₫&nbsp;</span>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full-width-div-2" required>
+                <mat-label>Chọn loại</mat-label>
+                <mat-select [(value)]="category">
+                    <mat-option value="CPU">Vi sử lí</mat-option>
+                    <mat-option value="GPU">Card màn hình</mat-option>
+                    <mat-option value="RAM">RAM</mat-option>
+                    <mat-option value="PSU">Nguồn</mat-option>
+                    <mat-option value="KEY">Bàn Phím</mat-option>
+                    <mat-option value="MOU">Chuột</mat-option>
+                    <mat-option value="HEA">Tai nghe</mat-option>
+                    <mat-option value="MIN">Màn Hình</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" floatLabel="always" class="full-width-div-3">
+                <mat-label>quantity</mat-label>
+                <input matInput name="quantity" type="number" placeholder="0" class="right-align" [(ngModel)]="quantity"
+                    required>
+            </mat-form-field>
+        </div>
+        <div>
+            <form enctype='multipart/form-data' #upload>
+                <button type="button" mat-flat-button color="primary" (click)="imgFileInput.click()">Add image for
+                    product</button>
+                <input hidden type="file" #imgFileInput (change)="onFileSelected($event)" />
+                <span *ngIf="imageName">{{imageName}}</span>
+            </form>
+        </div>
+    </form>
+    <button mat-flat-button color="accent" (click)="onSubmit()">Submit</button>
+</div>

@@ -1,0 +1,41 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" [opened]="openState">
+        <div class="selector">
+            <button mat-button>
+                <mat-icon>memory</mat-icon>
+                Vi sử lí
+            </button>
+            <button mat-button>
+                <mat-icon>developer_board</mat-icon>
+                Card màn hình
+            </button>
+            <button mat-button>
+                <mat-icon>keyboard_command_key</mat-icon>
+                RAM
+            </button>
+            <button mat-button>
+                <mat-icon>bolt</mat-icon>
+                Nguồn
+            </button>
+            <button mat-button>
+                <mat-icon>keyboard</mat-icon>
+                Bàn phím
+            </button>
+            <button mat-button>
+                <mat-icon>mouse</mat-icon>
+                Chuột
+            </button>
+            <button mat-button>
+                <mat-icon>headphones</mat-icon>
+                Tai nghe
+            </button>
+            <button mat-button>
+                <mat-icon>desktop_windows</mat-icon>
+                Màn Hình
+            </button>
+        </div>
+    </mat-drawer>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

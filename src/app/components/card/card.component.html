@@ -1,0 +1,14 @@
+<mat-card class="card">
+    <img mat-card-image [src]="product.image" [alt]="product.description">
+    <mat-card-header>
+        <mat-card-title class="product-name">{{product.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p class="product-description">{{product.description}}</p>
+        <p>{{product.price | currency:'VND':true}}</p>
+    </mat-card-content>
+    <div class="card-spacer"></div>
+    <mat-card-actions class="card-footer">
+
+    </mat-card-actions>
+</mat-card>
